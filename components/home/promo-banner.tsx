@@ -6,8 +6,8 @@ export function PromoBanner({ text, badge }: { text: string; badge: string }) {
   const badgeFontSize = Math.max(9, Math.min(18, Math.round(72 / (longestWord * 0.62))))
 
   return (
-    <section className="mx-auto max-w-7xl px-4 pb-16 lg:px-8">
-      <div className="relative flex min-h-[132px] items-center overflow-hidden rounded-2xl bg-orange text-orange-foreground shadow-lg ring-1 ring-black/5">
+    <section className="relative z-10 mx-auto -mt-8 max-w-7xl px-4 pb-16 lg:px-8">
+      <div className="relative flex min-h-48 items-center overflow-hidden rounded-2xl bg-orange text-orange-foreground shadow-lg ring-1 ring-black/5">
         {/* Car photo blended into the far (left) side */}
         <img
           src="/images/car-banner.png"
