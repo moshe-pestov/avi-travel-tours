@@ -6,7 +6,7 @@ export function PromoBanner({ text, badge }: { text: string; badge: string }) {
   const badgeFontSize = Math.max(9, Math.min(18, Math.round(72 / (longestWord * 0.62))))
 
   return (
-    <section className="relative z-10 mx-auto -mt-8 max-w-7xl px-4 pb-16 lg:px-8">
+    <section className="relative mx-auto mt-4 max-w-7xl px-4 pb-16 lg:px-8">
       <div className="relative flex min-h-48 items-center overflow-hidden rounded-2xl bg-orange text-orange-foreground shadow-lg ring-1 ring-black/5">
         {/* Car photo blended into the far (left) side */}
         <img
@@ -16,9 +16,9 @@ export function PromoBanner({ text, badge }: { text: string; badge: string }) {
           className="pointer-events-none absolute inset-y-0 left-0 h-full w-3/5 object-cover"
         />
         {/* Gradient fade: solid orange on the right, image revealed on the left */}
-        <div className="absolute inset-0 bg-gradient-to-l from-orange via-orange/85 to-transparent" />
-        {/* Subtle warm overlay to keep text legible over the photo */}
-        <div className="absolute inset-0 bg-orange/25 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-l from-orange via-orange/95 to-transparent" />
+        {/* Light orange tint keeps the photo vibrant while supporting text contrast. */}
+        <div className="absolute inset-0 bg-orange/10" />
 
         {/* Starburst "special offer" seal */}
         <div className="relative z-10 m-4 hidden shrink-0 sm:m-5 sm:block">
