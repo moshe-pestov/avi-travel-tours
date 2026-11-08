@@ -1,5 +1,4 @@
 import { HeroSection } from '@/components/home/hero-section'
-import { FeatureStrip } from '@/components/home/feature-strip'
 import { SpecialitiesSection } from '@/components/home/specialities-section'
 import { ToursSection } from '@/components/home/tours-section'
 import { MultiDaySection } from '@/components/home/multiday-section'
@@ -111,11 +110,10 @@ export default async function HomePage({ params }: { params: Promise<{ lang: Loc
     <main>
       <JsonLd data={[travelAgencyLd, webSiteLd]} />
       <HeroSection title={heroTitle} subtitle={heroSubtitle} dict={dict} />
-      <FeatureStrip dict={dict} />
+      <PromoBanner text={bannerText} badge={bannerBadge} />
       <SpecialitiesSection specialities={specialities} locale={lang} dict={dict} heading={specialitiesHeading} />
       <ToursSection posts={vacationPosts} locale={lang} dict={dict} />
       <MultiDaySection dict={dict} />
-      <PromoBanner text={bannerText} badge={bannerBadge} />
       <BlogPreview posts={servicePosts} locale={lang} dict={dict} />
       <TestimonialsSection testimonials={testimonials} locale={lang} dict={dict} />
       <CtaSection whatsapp={settings.whatsapp ?? '0040760610995'} dict={dict} />
