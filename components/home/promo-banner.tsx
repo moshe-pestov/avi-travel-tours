@@ -7,7 +7,7 @@ export function PromoBanner({ text, badge }: { text: string; badge: string }) {
 
   return (
     <section className="relative mx-auto mt-4 max-w-7xl px-4 pb-16 lg:px-8">
-      <div className="relative flex min-h-48 items-center overflow-hidden rounded-2xl bg-orange text-orange-foreground shadow-lg ring-1 ring-black/5">
+      <div className="relative flex min-h-48 items-center overflow-hidden rounded-2xl bg-primary text-primary-foreground shadow-lg ring-1 ring-black/5">
         {/* Car photo blended into the far (left) side */}
         <img
           src="/images/car-banner.png"
@@ -15,10 +15,8 @@ export function PromoBanner({ text, badge }: { text: string; badge: string }) {
           aria-hidden
           className="pointer-events-none absolute inset-y-0 left-0 h-full w-3/5 object-cover"
         />
-        {/* Gradient fade: solid orange on the right, image revealed on the left */}
-        <div className="absolute inset-0 bg-gradient-to-l from-orange via-orange/95 to-transparent" />
-        {/* Light orange tint keeps the photo vibrant while supporting text contrast. */}
-        <div className="absolute inset-0 bg-orange/10" />
+        {/* Green fades toward the left to reveal more of the scenic photo. */}
+        <div className="absolute inset-0 bg-gradient-to-l from-primary via-primary/60 to-transparent" />
 
         {/* Starburst "special offer" seal */}
         <div className="relative z-10 m-4 hidden shrink-0 sm:m-5 sm:block">
@@ -32,7 +30,7 @@ export function PromoBanner({ text, badge }: { text: string; badge: string }) {
               }}
             />
             {/* Static text disc on top so the words stay upright and readable */}
-            <div className="relative z-10 col-start-1 row-start-1 flex size-[78px] flex-col items-center justify-center gap-0.5 rounded-full px-1 text-center leading-none text-orange">
+            <div className="relative z-10 col-start-1 row-start-1 flex size-[78px] flex-col items-center justify-center gap-0.5 rounded-full px-1 text-center leading-none text-primary">
               {badgeWords.map((word, i) => (
                 <span
                   key={i}
