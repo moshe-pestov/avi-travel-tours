@@ -8,12 +8,12 @@ export function PromoBanner({ text, badge }: { text: string; badge: string }) {
   return (
     <section className="relative mx-auto mt-4 max-w-7xl px-4 pb-16 lg:px-8">
       <div className="relative flex min-h-48 items-center overflow-hidden rounded-2xl bg-primary text-primary-foreground shadow-lg ring-1 ring-black/5">
-        {/* Car photo blended into the far (left) side */}
+        {/* Full-width photo lets the green overlay fade smoothly across the banner. */}
         <img
           src="/images/car-banner.png"
           alt=""
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 left-0 h-full w-3/5 object-cover"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
         />
         {/* Green fades toward the left to reveal more of the scenic photo. */}
         <div className="absolute inset-0 bg-gradient-to-l from-primary via-primary/60 to-transparent" />
